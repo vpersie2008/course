@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>form表单</title>
+</head>
+
+<body>
+
+    <form action="next.php">
+
+        <!-- text文本输入框 -->
+        <div>
+            <label for="name">姓名</label>
+            <input type="text" id="name" name="name" value="Mr.Jerry" />
+        </div>
+
+        <!-- Email输入框 -->
+        <div>
+            <label for="email">邮箱</label>
+            <input type="email" id="email" name="email" placeholder="请输入邮箱" />
+        </div>
+
+        <!-- number数字输入框 -->
+        <div>
+            <label for="number">年龄</label>
+            <input type="number" id="number" name="number" placeholder="请输入年龄" />
+        </div>
+
+        <!-- 日期date选项 -->
+        <div>
+            <label for="date">出生日期</label>
+            <input type="date" id="date" name="date" />
+        </div>
+
+        <!-- radio单选框 -->
+        <div>
+            <label for="number">性别</label>
+            <input type="radio" id="radio" name="radio" value="male" />男
+            <input type="radio" id="radio" name="radio" value="female" />女
+            <input type="radio" id="radio" name="radio" value="other" />其他
+        </div>
+
+        <!-- 下拉框 select -->
+        <div>
+            <label for="good-at">最擅长</label>
+            <select name="good-at" id="good-at">
+                <option value="forward-develop">前端开发</option>
+                <option value="back-develop">后端开发</option>
+                <option value="auto-test">自动化测试</option>
+                <option value="speak-talk">演讲与口才</option>
+            </select>
+        </div>
+
+        <!-- 复选框 check剥削 -->
+        <div>
+
+            <input type="checkbox" id="checkbox" name="checkbox" value="football" />足球
+            <input type="checkbox" id="checkbox" name="checkbox" value="baskketball" />篮球
+            <input type="checkbox" id="checkbox" name="checkbox" value="volleyball" />排球
+            <input type="checkbox" id="checkbox" name="checkbox" value="swim" />游泳
+        </div>
+
+        <!-- textarea 文本输入框 -->
+        <div>
+            <label for="message">特殊说明</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        </div>
+
+
+        <div>
+            <!-- submit提交表单到action的地址 -->
+            <input type="submit" value="注册" />
+            
+            <!-- reset重置表单内容 -->
+            <input type="reset" value="重置" />
+
+            <!-- button不会提交表单 -->
+            <input type="button" value="测试" />
+        </div>
+    </form>
+
+</body>
+
+</html>
+
+<style type="text/css">
+    div {
+        padding-top: 5px;
+    }
+</style>

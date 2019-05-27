@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>行标签与块标签</title>
+</head>
+
+<body>
+
+    <!-- h1是一个块标签，它不会和任何一个标签摆在一行 -->
+    <h1 class="border-line">块标签不会和任何标签摆在一行</h1>
+
+
+    <!-- p标签也是一个块标签 ,但文本内容本质上是一个行标签-->
+    <p class="border-line">
+        p标签页也是一个块标签，它不会和任何一个标签摆在一行，段落太长换行时，依然撑满整行。
+        文本内容是一个行标签，里面的文字时自动在本行追加的。
+    </p>
+
+
+    <!-- 常用的行标签 ：<a>,<span>,<strong> -->
+
+    <!-- a标签是一个行标签，多个a标签会在一行 -->
+
+    <a href="#">1号A标签</a>
+    <a href="#">2号A标签</a>
+
+    <!-- span，strong标签是一个行标签，不会换行 -->
+
+    <p>
+        <!-- span是一个行标签 -->
+        这是一段测试span标签会不会换行的内容，例如<span>span1</span>
+        紧接着<span>span2</span>
+        可以看出来两者不会换行
+        <!-- strong也是一个行标签 -->
+        strong也是一个行标签，不会换行<strong>strong1</strong>
+        紧接着<strong>strong2</strong>
+    </p>
+
+    
+</body>
+
+</html>
+
+<style type="text/css">
+    .border-line {
+        border: 2px green solid;
+    }
+</style>

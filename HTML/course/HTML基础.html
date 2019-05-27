@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML基础</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>HTML 基础教程</h1>
+<hr />
+<h2>一、HTML 课程介绍</h2>
+<h3>什么是HTML</h3>
+<ul>
+<li>HTML 指的是超文本标记语言(Hyper Text Markup Language)</li>
+<li>HTML 它不是一个变成语言，它是一种标记语言</li>
+<li>标记语言是一套标记标签，主要用于构建网页文档</li>
+<li>HTML 使用标签构建网页 如<code>&lt;div&gt;&lt;/div&gt;</code></li>
+</ul>
+<h3>浏览器推荐</h3>
+<ul>
+<li>谷歌Google(推荐)</li>
+<li>火狐(Firefox)</li>
+<li>Safari</li>
+<li>IE（最好不要用）</li>
+</ul>
+<h3>编辑器推荐</h3>
+<ul>
+<li>Visual Studio code (推荐)</li>
+</ul>
+<h2>二、上网的基本常识</h2>
+<h3>因特网（Internet）</h3>
+<ul>
+<li>国际互联网</li>
+</ul>
+<blockquote>
+<p>互相通信的计算机连接而成的“全球网络”
+ - 每个电脑都有一个IP地址 192.168.0.1
+ - 计算机之间的相互通讯使用的是TCP/IP 协议
+ - HTTP 处理网络之间的数据请求和响应
+HTTP 全程“HyperText Transfer Protocal(超文本传输协议)”</p>
+</blockquote>
+<h3>Web服务器</h3>
+<ul>
+<li>服务器是用于存储写好的网页或程序(Linux，Windows，Nginx)</li>
+</ul>
+<blockquote>
+<p>网页本质上就是“一个一个的文件”，网站本质上就是网页文件的集合</p>
+</blockquote>
+<ul>
+<li>主机服务商是提供可用的服务器空间</li>
+<li>域名是一个便于识别的统一名字如，https://www.baidu.com</li>
+<li>DNS 是将域名解析到服务器的公网IP上(Domain Name Service)</li>
+</ul>
+<h2>三、HTML 是什么？</h2>
+<h3>Html 是什么？</h3>
+<ul>
+<li>HTML 指的是超文本标记语言(Hyper Text Markup Language)</li>
+</ul>
+<blockquote>
+<p>HTML 它不是一门变成语言，是标记语言，通过标签渲染展示</p>
+</blockquote>
+<ul>
+<li>标记语言的作用是制作网页结构或者文档</li>
+<li>HTML 是前端最重而且是最基础的部分，是一等公民</li>
+<li>HTML 部分会及其枯燥</li>
+</ul>
+<h3>CSS 是什么？</h3>
+<ul>
+<li>CSS 说白了就是网页变得更炫的样式，全称较层叠样式表(Cascading Style Sheets)</li>
+<li>CSS 就是针对HTML 标签设置样式</li>
+</ul>
+<blockquote>
+<p>例如将下列h1标签设置成红色<code>&lt;h1 style=&quot;color:red&quot;&gt;&lt;/h1&gt;</code></p>
+</blockquote>
+<h3>网站简单技术分工</h3>
+<ul>
+<li>HTML = 内容展示/结构/渲染网站</li>
+<li>CSS = 样式/设计</li>
+<li>Javascript =让网页动起来，前端的灵魂</li>
+<li>.NET service，后端服务</li>
+<li>Database(SqlServer、MySQL，MongoDB<非关系型>)</li>
+</ul>
+<h3>VS Code 介绍及使用</h3>
+<ul>
+<li>VS code Live Server</li>
+</ul>
+<blockquote>
+<p>1.作用：该插件用于实时响应HTML代码，保存之后实时刷新页面</p>
+<p>2.安装及使用：左侧导航条，搜索live server，安装完跳转到当前页面，右键 Open with live server</p>
+<p>3.如何关掉：在网页代码中，右键Stop live server，即可关掉</p>
+</blockquote>
+<h3>HTML 的标签</h3>
+<ul>
+<li>标签的代表标记是<strong>&lt;&gt;</strong></li>
+<li>通常写标签都是承兑出现的双标签</li>
+<li>双标签 </li>
+</ul>
+<blockquote>
+<p><code>&lt;h1&gt;Hello&lt;/h1&gt;</code></p>
+<p><code>&lt;p&gt;欢迎来到我的课堂&lt;/p&gt;</code></p>
+</blockquote>
+<ul>
+<li>单标签</li>
+</ul>
+<blockquote>
+<p><code>&lt;br&gt;</code> 换行符，在HTML5中可以正常解析</p>
+<p><code>&lt;br /&gt;</code> 换行符，在HTML5&amp;XHTML 中正常解析</p>
+</blockquote>
+<ul>
+<li>代码范例 demo</li>
+</ul>
+<blockquote>
+<p><code>&lt;h1&gt;欢迎来到我的课堂&lt;/h1&gt;</code></p>
+<p><code>&lt;p&gt;欢迎来到我的课堂&lt;/p&gt;</code></p>
+</blockquote>
+<ul>
+<li>HTML DOCTYPE</li>
+</ul>
+<blockquote>
+<p>DOCTYPE 表示HTML代码的文档类型，<code>&lt;!DOCTYPE html&gt;</code> 即表示HTML5</p>
+</blockquote>
+<h2>四、HTML常用的标签</h2>
+<h3>常用标签</h3>
+<ul>
+<li>标题标签 h1~h6 即<code>&lt;h1&gt;&lt;/h1&gt;</code></li>
+<li>段落标签 <code>&lt;p&gt;&lt;/p&gt;</code></li>
+<li>字体加粗标签<code>&lt;strong&gt;&lt;/strong&gt;</code></li>
+<li>斜体字标签<code>&lt;em&gt;&lt;/em&gt;</code></li>
+<li>删除线标签<code>&lt;del&gt;&lt;/del&gt;</code></li>
+<li>换行标签<code>&lt;br&gt;或&lt;br /&gt;</code></li>
+<li>横线换行标签 <code>&lt;hr&gt;s</code></li>
+</ul>
+<h3>链接和图片标签</h3>
+<ul>
+<li>链接标签 即 a标签</li>
+</ul>
+<blockquote>
+<p>链接到外部链接，href为外部网址
+<code>&lt;a href=&quot;http://www.baidu.com&quot;&gt;链接到外部网址&lt;/a&gt;</code></p>
+<p>链接到内部链接，href为内部文档地址
+<code>&lt;a href=&quot;/test.html&quot;&gt;链接到内部文档地址&lt;/a&gt;</code></p>
+<p>新起一页打开，<code>&lt;a href=&quot;http://www.baidu.com&quot;&gt;链接到外部网址&lt;/a&gt;</code>`</p>
+</blockquote>
+<ul>
+<li>图片标签，即img标签</li>
+</ul>
+<blockquote>
+<p>显示本地图片：</p>
+<p><code>&lt;img src=&quot;/images/athletic.png&quot; alt=&quot;如果图片未找到，则说明这段话&quot;&gt;&lt;/img&gt;</code></p>
+<p>显示外部地址图片</p>
+<p><code>&lt;img src=&quot;https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1558026131478&amp;di=09854742d7bf19caeab821f76f5e84e9&amp;imgtype=0&amp;src=http%3A%2F%2F03.imgmini.eastday.com%2Fmobile%2F20180412%2F20180412000746_21ff1e60a555b4b8f5c45e7abac293e0_2.jpeg&quot; alt=&quot;如果图片未找到，则说明这段话&quot;&gt;&lt;/img&gt;</code></p>
+<p>img标签中可以使用width和height属性来控制图片大小，如</p>
+<p><code>&lt;img src=&quot;/images/athletic.png&quot; alt=&quot;如果图片未找到，则说明这段话&quot; width=&quot;200&quot; height=&quot;300&quot;&gt;&lt;/img&gt;</code></p>
+</blockquote>
+<h3>列表和表格标签</h3>
+<p>li&gt;*4</p>
+<ul>
+<li>有序列表<code>&lt;ol&gt;&lt;/ol&gt;</code></li>
+</ul>
+<blockquote>
+<p>使用列表快捷键 <strong><code>li*4</code></strong> 可以快速创建元素</p>
+</blockquote>
+<pre><code>&lt;!-- &lt;ol type=&quot;1&quot;&gt;
+    &lt;li&gt;list1&lt;/li&gt;
+    &lt;li&gt;list2&lt;/li&gt;
+    &lt;li&gt;list3&lt;/li&gt;
+    &lt;li&gt;list4&lt;/li&gt;
+&lt;/ol&gt;--&gt;
+&lt;!-- 1 阿拉伯数字 ,A 大写排序 ,a 小写排序, I 大写罗马字排序, i 罗马数字排序--&gt;
+&lt;!-- type 类型--&gt;
+&lt;!-- 1 阿拉伯数字 ,A 大写排序 ,a 小写排序, I 大写罗马字排序, i 罗马数字排序--&gt;
+</code></pre>
+
+<ul>
+<li>无序列表<code>&lt;ul&gt;&lt;/ul&gt;</code></li>
+</ul>
+<!-- 无序列表 -->
+<pre><code>&lt;ul&gt;
+    &lt;li&gt;list1&lt;/li&gt;
+    &lt;li&gt;list2&lt;/li&gt;
+    &lt;li&gt;list3&lt;/li&gt;
+    &lt;li&gt;list4&lt;/li&gt;
+&lt;/ul&gt;      
+&lt;!-- type 类型--&gt;
+&lt;!-- 1 阿拉伯数字 ,A 大写排序 ,a 小写排序, I 大写罗马字排序, i 罗马数字排序--&gt;
+</code></pre>
+
+<ul>
+<li>无序列表<code>&lt;table&gt;&lt;/table&gt;</code></li>
+</ul>
+<!----->
+<pre><code>&lt;table style=&quot;width:600px&quot;&gt;
+    &lt;thead&gt;
+        &lt;th&gt;
+        &lt;td&gt;Header1&lt;/td&gt;
+        &lt;td&gt;Header2&lt;/td&gt;
+        &lt;td&gt;Header3&lt;/td&gt;
+        &lt;/th&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Content1&lt;/td&gt;
+            &lt;td&gt;Content2&lt;/td&gt;
+            &lt;td&gt;Content3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Content1&lt;/td&gt;
+            &lt;td&gt;Content2&lt;/td&gt;
+            &lt;td&gt;Content3&lt;/td&gt;
+        &lt;/tr&gt;
+
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+
+<h3>行标签和块标签</h3>
+<ul>
+<li>行标签特点</li>
+</ul>
+<blockquote>
+<p>1.行标签不会换行</p>
+<p>2.行标签宽度由内容决定</p>
+<p>3.常用的行标签如<code>&lt;span&gt;</code>,<code>&lt;strong&gt;</code>,<code>&lt;a&gt;</code>,</p>
+</blockquote>
+<ul>
+<li>块标签特点</li>
+</ul>
+<blockquote>
+<p>1.块标签会占满整行</p>
+<p>2.块标签的宽度就是容器的宽度</p>
+<p>3.常用的块标签有<code>&lt;p&gt;</code>,<code>&lt;div&gt;</code>,<code>&lt;h1&gt;</code></p>
+</blockquote>
+<p><strong>注意: 不需要去记这些，只需通过F12打开调试器学会看即可</strong></p>
+<blockquote>
+</blockquote>
+<h3>id属性和class属性</h3>
+<ul>
+<li>id属性主要用于标示元素，一个HTML文档中某个元素的ID应该时唯一的</li>
+<li>class属性是用来描述元素的样式的，多个元素可以用同一个class值，即它不是唯一的</li>
+</ul>
+<h3>from表单提交</h3>
+<ul>
+<li>input的常用类型</li>
+</ul>
+<blockquote>
+<p>input的常见类型有</p>
+<p>text(文本输入框)</p>
+<p>password（密码输入框）</p>
+<p>date（日期输入框）</p>
+<p>radio（单选框）</p>
+<p>checkbox（复选框）</p>
+<p>number（输入字输入框）</p>
+</blockquote>
+<ul>
+<li>from表单提交</li>
+</ul>
+<blockquote>
+<p>from标签用于form内标签的数据提交到后台action属性对应地址，内容都是根据标签中的 name或value抓取的。</p>
+</blockquote>
+<ul>
+<li>textarea和下拉框</li>
+</ul>
+<blockquote>
+<p>textarea 为多行文本输入框，可根据<code>cols</code>(设置列数)<code>rows</code>(设置行数)</p>
+<p>select为下拉框，option用于设置下拉属性</p>
+</blockquote>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
