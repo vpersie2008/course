@@ -1,38 +1,32 @@
-##一、Nodejs简介
+##Node.js简介##
 
-1. NodeJS 是一个基于Chrome V8引擎的JavaScript运行环境
-2. NodeJS 使用了一个事件驱动、非阻塞式I/O的模型，使其轻量又高效。
-3. NodeJS 的包管理器npm,是全球最大的开源库生态系统。
-4. Node的初衷,Ryan Dahl 是为了设计一款高性能Web服务器，然而Node现在应用最火的确实前端。
+#### 一、Nodejs简单介绍 ####
 
-**二、NodeJS 为什么这么火？**
+1. NodeJS 是一个基于Chrome V8引擎的**JavaScript**运行环境
+2. NodeJS 使用了一个事件驱动、**非阻塞式I/O**的模型，使其轻量又高效。
+3. NodeJS 的包管理器**npm**,是全球最大的开源库生态系统。
+4. NodeJs 设计的的初衷,**Ryan Dahl** 是为了设计一款高性能Web服务器，然而Node现在应用最火的却是前端。
+
+#### 二、NodeJS 为什么这么火？ ####
 
 1. 使用JavaScript语言开发，给前端人员开发后端服务、前端交互带来了福音。
-2. 速度非常快（V8引擎 & non-block 非阻塞式I/O）
+2. 速度非常快（V8引擎 & non-block **非阻塞式I/O**）
 3. NodeJS包管理器npm，全球最大开源生态系统。
 
 
-**三、我的课程你能学到什么**
+#### 三、我的课程你能学到什么 ####
 
 1. 学习NodeJS工作原理，V8引擎、模块、事件队列、文件系统
 2. 学会使用express搭建后端服务
 
 >学习本课程需要的基础技术
 
->1. JavaScript
-2. HTML + CSS
-3. CommandLine
+>1. **JavaScript**
+>2. **HTML + CSS**
+>3. **CommandLine**
 
 
-查看Node 运行环境
-node -v
-查看npm版本
-npm -v
-如何运行
-node index.js
-
-
-**四、详解同步/异步、阻塞/非阻塞**
+#### 四、详解同步/异步、阻塞/非阻塞 ####
 
 - **同步：** 就是发出一个功能调用时，在没有得到返回结果前，就不会返回，就是必须一件事一件事做。
 - **异步：** 与同步相对，当一个异步过程发生后，调用者不能立刻得到结果，实际处理这个调用的部件在完成后，通过状态，通知来通知调用者。
@@ -48,11 +42,25 @@ node index.js
 
 **综上：** 同步/异步，阻塞/非阻塞，完全是两码事。
 
-**五、Node的单线程：**
+#### 五、Node的单线程： ####
  
 - Node是单线程的，这里指的单线程，这里的单线程仅仅指JavaScript执行在单线程里，无论是Linux还是Windows，内部完成I/O任务都另有线程池
 
-**六、Node是如何知道有事件需要处理的呢？**
+#### 六、Node是如何知道有事件需要处理的呢？ ####
 
 - 事件循环（生产者/消费者模型）（观察者模式）
+
+
+####七、Node 常用命令####
+
+- 查看Node 运行环境（node -v）
+- 查看npm版本（npm -v）
+- 如何运行 (node index.js)
+- 安装模块 （npm install moduleName）
+- 安装模块并写入 package.json (npm install ModuleName --save)
+- 安装指定版本的模块 (npm install ModuleName@1.0.1)
+- 卸载模块 （npm uninstall moduleName）
+- 卸载指定版本的模块（npm uninstall moduleName）
+
+
 
